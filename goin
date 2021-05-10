@@ -1,0 +1,24 @@
+#!/bin/bash
+current_project_path=$(dirname $0)
+
+function command () {
+    if [ "$1" = "run" ]; then
+        $current_project_path/key-server
+    elif [ "$1" = "kill" ]; then
+        $current_project_path/key-server-kill
+    elif [ "$1" = "copyto" ]; then
+        copoy_server $2
+    else
+        $current_project_path/key-server
+    fi
+}
+
+function copoy_server () {
+    # echo $1
+    cp -rv $current_project_path/*py $1
+    cp -rv $current_project_path/js $1
+    cp -rv $current_project_path/key-server* $1
+}
+
+
+command $1 $2

@@ -1,0 +1,25 @@
+#!/bin/bash
+#encoding=utf-8
+current_project_path=$(dirname $0)
+
+function run_server () {
+    python3 -u "$current_project_path/server.py"
+}
+
+function initServer () {
+    # param: sleep_time
+    init_res=$(curl -s 127.0.0.1:8989/init)
+    printf '%s\n' "$init_res"
+    sleep $1
+    check_res=$(curl -s 127.0.0.1:8989/test)
+    if [ "${check_res}" = '"about:blank"' ]; then
+        echo "Browser launch successfully."
+    fi
+}
+
+function main() {
+    run_server 
+    # initServer 1
+}
+
+main
