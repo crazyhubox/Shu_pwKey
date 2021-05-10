@@ -4,6 +4,12 @@
 ![avatar](https://img.shields.io/badge/pyppeteer-0.0.25-orange)
 ![avatar](https://img.shields.io/badge/fastapi-0.63.0-grenn)
 
+- [Shu_pwKey](#shu_pwkey)
+  - [目录结构](#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
+  - [说明](#%E8%AF%B4%E6%98%8E)
+  - [最后](#%E6%9C%80%E5%90%8E)
+
+
 上大登录的加密参数的生成
 
 ![image](https://github.com/crazyhubox/Shu_pwKey/blob/main/static/key.gif)
