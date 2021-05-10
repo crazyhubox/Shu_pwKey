@@ -7,6 +7,7 @@ function command () {
     elif [ "$1" = "kill" ]; then
         $current_project_path/key-server-kill
     elif [ "$1" = "copyto" ]; then
+    # 拷贝到当前的目录
         copoy_server $2
     else
         $current_project_path/key-server
@@ -22,3 +23,4 @@ function copoy_server () {
 
 
 command $1 $2
+# $2位置参数是当前的目录
